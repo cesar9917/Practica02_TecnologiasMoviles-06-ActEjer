@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_app"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese cantidad a convertir"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:padding="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupMonedas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/editTextText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp">
+
+        <RadioButton android:id="@+id/radio0" android:text="Dólares" android:checked="true"/>
+        <RadioButton android:id="@+id/radio1" android:text="Soles"/>
+        <RadioButton android:id="@+id/radio2" android:text="Euro"/>
+        <RadioButton android:id="@+id/radio3" android:text="Libra"/>
+        <RadioButton android:id="@+id/radio4" android:text="Rupia"/>
+        <RadioButton android:id="@+id/radio5" android:text="Real"/>
+        <RadioButton android:id="@+id/radio6" android:text="Peso Mexicano"/>
+        <RadioButton android:id="@+id/radio7" android:text="Yuan"/>
+        <RadioButton android:id="@+id/radio8" android:text="Yen"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnConvertir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convertir"
+        android:onClick="miClicManejador"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupMonedas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
